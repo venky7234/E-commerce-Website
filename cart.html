@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar */
+        #navbar {
+            background: #333;
+            color: #fff;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        #navbar ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            margin: 0;
+            padding: 0;
+        }
+
+        #navbar li {
+            margin: 0;
+        }
+
+        #navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        #navbar a:hover {
+            background: #555;
+            border-radius: 5px;
+        }
+
+        /* Footer */
+        #footer {
+            background: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Cart Page Styles */
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+            padding-top: 60px; /* Adjust for fixed navbar */
+        }
+
+        #cart-products-list {
+            margin-bottom: 20px;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .cart-item img {
+            width: 100px;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .cart-item-details {
+            flex: 1;
+            margin-left: 10px;
+        }
+
+        .cart-item-details h2 {
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+
+        .cart-item-details p {
+            margin: 0;
+        }
+
+        .cart-item-actions {
+            text-align: right;
+        }
+
+        #cart-title {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        #cart-summary {
+            margin-bottom: 20px;
+            background: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #cart-summary p {
+            margin: 5px 0;
+        }
+
+        #total-amount {
+            text-align: right;
+            font-size: 1.5em;
+            margin: 20px 0;
+            background: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #total-amount p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav id="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="category.html">Category</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="checkout.html">Checkout</a></li>
+            <li><a href="order-confirmation.html">Order Confirmation</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+            <li><a href="search.html">Search</a></li>
+        </ul>
+    </nav>
+
+    <!-- Cart Page Content -->
+    <div class="container">
+        <!-- Cart Products List -->
+        <div id="cart-products-list">
+            <!-- Example cart item -->
+            <div class="cart-item">
+                <img src="https://imgs.search.brave.com/UXcc2lEF1Cn7SlH6Pgn1qIm0_UywSyAh19MMQMfDoeQ/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/bW9zLmNtcy5mdXR1/cmVjZG4ubmV0L3dY/TWN1MnM4ZVNEWnJa/bTc3d0tnREMtMzIw/LTgwLmpwZw" alt="Product 1">
+                <div class="cart-item-details">
+                    <h2>USSB 1!TB</h2>
+                    <p>Quantity:20 <span class="quantity">2</span></p>
+                    <p>Price: $<span class="price">50.00</span></p>
+                </div>
+                <div class="cart-item-actions">
+                    <button class="remove-item">Remove</button>
+                </div>
+            </div>
+
+            <div class="cart-item">
+                <img src="https://imgs.search.brave.com/idZSl1JH1-nK7Jm3-wf6en-JMQ3HDqTBwRja_tDUJXQ/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9oaXBz/LmhlYXJzdGFwcHMu/Y29tL2htZy1wcm9k/L2ltYWdlcy9kb3du/bG9hZC0yMDI0LTAx/LTA1dDEwNTQyNS01/MTMtNjU5N2RmZjI0/YWE4Ny5wbmc_Y3Jv/cD0wLjY2OHh3OjEu/MDB4aDswLjE2NXh3/LDAmcmVzaXplPTk4/MDoq" alt="Product 1">
+                <div class="cart-item-details">
+                    <h2>USSB 1!TB</h2>
+                    <p>Quantity:20 <span class="quantity">2</span></p>
+                    <p>Price: $<span class="price">50.00</span></p>
+                </div>
+                <div class="cart-item-actions">
+                    <button class="remove-item">Remove</button>
+                </div>
+            </div>
+            <div class="cart-item">
+                <img src="https://imgs.search.brave.com/PMVELtmLwmZtBPDh8-pmSbOu_PgndB1o8QUXnRx1lbY/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzEyR05jczJrTkwu/anBn" alt="Product 1">
+                <div class="cart-item-details">
+                    <h2>USSB 1!TB</h2>
+                    <p>Quantity:20 <span class="quantity">2</span></p>
+                    <p>Price: $<span class="price">50.00</span></p>
+                </div>
+                <div class="cart-item-actions">
+                    <button class="remove-item">Remove</button>
+                </div>
+            </div>
+            <div class="cart-item">
+                <img src="https://imgs.search.brave.com/_u3DdqRZWTBs1TjEtTjhXnKqMVLp6ln-j0INdU-FzFg/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFJbEwzcTd6bkwu/anBn" alt="Product 1">
+                <div class="cart-item-details">
+                    <h2>USSB 1!TB</h2>
+                    <p>Quantity:20 <span class="quantity">2</span></p>
+                    <p>Price: $<span class="price">50.00</span></p>
+                </div>
+                <div class="cart-item-actions">
+                    <button class="remove-item">Remove</button>
+                </div>
+            </div>
+            <div class="cart-item">
+                <img src="https://imgs.search.brave.com/z4_NT6BnqnB7tzji3GSx3nJDVALBKdMXIjdLKh_Q31M/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFQQmtBMEcrM0wu/anBn" alt="Product 2">
+                <div class="cart-item-details">
+                    <h2>AI Mouse-2</h2>
+                    <p>Quantity: 25 <span class="quantity">1</span></p>
+                    <p>Price: $<span class="price">30.00</span></p>
+                </div>
+                <div class="cart-item-actions">
+                    <button class="remove-item">Remove</button>
+                </div>
+            </div>
+
+            <!-- Add more cart items as needed -->
+        </div>
+
+        <!-- Cart Title -->
+        <h1 id="cart-title">Your Cart</h1>
+
+        <!-- Cart Summary -->
+        <div id="cart-summary">
+            <p>Subtotal: $<span id="subtotal">0.00</span></p>
+            <p>Tax (10%): $<span id="tax">0.00</span></p>
+            <p>Shipping: $<span id="shipping">5.00</span></p>
+        </div>
+
+        <!-- Total Amount -->
+        <div id="total-amount">
+            <p>Total Amount: $<span id="total">0.00</span></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <p>&copy; 2024 Your E-commerce Website</p>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+        </ul>
+    </footer>
+
+    <script>
+        // JavaScript to handle cart functionalities
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCartTotals();
+
+            // Remove item functionality
+            document.querySelectorAll('.remove-item').forEach(button => {
+                button.addEventListener('click', function() {
+                    this.closest('.cart-item').remove();
+                    updateCartTotals();
+                });
+            });
+        });
+
+        function updateCartTotals() {
+            let subtotal = 0;
+            document.querySelectorAll('.cart-item').forEach(item => {
+                const price = parseFloat(item.querySelector('.price').textContent);
+                const quantity = parseInt(item.querySelector('.quantity').textContent);
+                subtotal += price * quantity;
+            });
+
+            const tax = subtotal * 0.10; // Assuming 10% tax
+            const shipping = 5.00; // Fixed shipping cost
+            const total = subtotal + tax + shipping;
+
+            document.getElementById('subtotal').textContent = subtotal.toFixed(2);
+            document.getElementById('tax').textContent = tax.toFixed(2);
+            document.getElementById('shipping').textContent = shipping.toFixed(2);
+            document.getElementById('total').textContent = total.toFixed(2);
+        }
+    </script>
+</body>
+</html>

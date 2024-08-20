@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar */
+        #navbar {
+            background: #333;
+            color: #fff;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        #navbar ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            margin: 0;
+            padding: 0;
+        }
+
+        #navbar li {
+            margin: 0;
+        }
+
+        #navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        #navbar a:hover {
+            background: #555;
+            border-radius: 5px;
+        }
+
+        /* Slider */
+        .slider {
+            position: relative;
+            margin-top: 60px; /* Adjust for fixed navbar */
+            overflow: hidden;
+        }
+
+        .slide {
+            position: relative;
+        }
+
+        .slide img {
+            width: 100%;
+            height: auto;
+        }
+
+        .slide-text {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        /* Shop by Category */
+        .shop-category {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .categories {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .category {
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+        }
+
+        .category img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .category p {
+            margin-top: 10px;
+        }
+
+        /* Latest Products */
+        .latest-products {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .products {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .product {
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            text-align: center;
+            width: calc(33.333% - 40px);
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .product p {
+            margin-top: 10px;
+        }
+
+        /* Features */
+        .features {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .feature-list {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .feature {
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            text-align: center;
+            width: 30%;
+        }
+
+        .feature img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .feature p {
+            margin-top: 10px;
+        }
+
+        /* Footer */
+        #footer {
+            background: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+
+        #footer ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+
+        #footer li {
+            margin: 0 10px;
+        }
+
+        #footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        #footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Scroll to Top Button */
+        #scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none;
+        }
+
+        #scroll-to-top:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav id="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="category.html">Category</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="checkout.html">Checkout</a></li>
+            <li><a href="order-confirmation.html">Order Confirmation</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+            <li><a href="search.html">Search</a></li>
+        </ul>
+    </nav>
+
+    <!-- Slider -->
+    <section class="slider">
+        <div class="slide">
+            <img src="https://imgs.search.brave.com/VIrvnin5LMeVjEBACZUGbXZ68YQWthpv7f_p21XLnlQ/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTM0/NzY4NTY0Mi9waG90/by9zbWlsaW5nLXlv/dW5nLWFzaWFuLXdv/bWFuLXNob3BwaW5n/LW9ubGluZS13aXRo/LXNtYXJ0cGhvbmUt/b24taGFuZC1yZWNl/aXZpbmctYS1kZWxp/dmVyZWQuanBnP2I9/MSZzPTE3MDY2N2Em/dz0wJms9MjAmYz1U/dHlZczNrZkdTWGdk/SDh4ZGMxb1oxNVll/am5zNEV4OFpDREZL/NHhoVHE0PQ" alt="Slide 1">
+            <div class="slide-text">Welcome to vicky's-store</div>
+        </div>
+    </section>
+
+    <!-- Shop by Category -->
+    <section class="shop-category">
+        <h2>Shop by Category</h2>
+        <div class="categories">
+            <div class="category">
+                <img src="https://imgs.search.brave.com/i9g1NMTv5ZqbjQw2eLjcHSr90BalT8C6l4ddG6czDlg/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNDY5/NTIxMDQwL3Bob3Rv/L2Utd2FzdGUtc21h/cnQtcGhvbmVzLmpw/Zz9zPTYxMng2MTIm/dz0wJms9MjAmYz1v/Uk9RYzR2aTgwamFh/RTVGeHlKZEp6eHFk/NVBTMWlsc3Q5X1Vh/Q0lnaklNPQ" alt="Category 1">
+                <p>Phones</p>
+            </div>
+            <div class="category">
+                <img src="https://imgs.search.brave.com/Di_o2IWMLPmSra9KQDd9-QBUZWD2UWHWXC4qrIJQY78/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pbnRl/cmZhY2UubWVkaWEv/d3AtY29udGVudC91/cGxvYWRzL3NpdGVz/LzMvMjAyNC8wNy9B/aS1hbmQtTWwtMi02/NDB4MzYwLmpwZw" alt="Category 2">
+                <p>AI Gadgets</p>
+            </div>
+            <div class="category">
+                <img src="https://imgs.search.brave.com/uv0KC6wL_VYxQ7uLc0t-KeqGpB5U0vt-PKqcuKcJChY/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9rYW1l/cnBvd2VyLmNvbS93/cC1jb250ZW50L3Vw/bG9hZHMvMjAyMi8w/NS8yMC1CZXN0LVRl/Y2gtRm9yLUNvbGxl/Z2UtU3R1ZGVudHMt/MjAyMi1UZWNoLUdh/ZGdldHMtRm9yLUNv/bGxlZ2UtU3R1ZGVu/dHMtb25saW5lLmpw/Zw" alt="Category 3">
+                <p>Students Things</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Products -->
+    <section class="latest-products">
+        <h2>Latest Products</h2>
+        <div class="products">
+            <div class="product">
+                <img src="https://imgs.search.brave.com/sDNR5gPF9-2SbJqSr9QL6geaKt9ctHcQG5Wcg03cIcM/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90aGlu/a21sLmFpL2NvbnRl/bnQvaW1hZ2VzLzIw/MjEvMTAvbGlmZS13/aXRob3V0LWFydGlm/aWNpYWwtaW50ZWxs/aWdlbmNlLmpwZw" alt="Product 1">
+                <p>Product 1</p>
+                <p>$20.00</p>
+            </div>
+            <div class="product">
+                <img src="https://imgs.search.brave.com/AfDiMs4rEx_jYTrwNs3kNsTTasggUWUTe2gF07WHwOk/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90aGVn/YWRnZXRmbG93LmNv/bS93cC1jb250ZW50/L3VwbG9hZHMvMjAy/MC8wOC9OZXR2dWUt/QmVsbGUtQUktV2kt/RmktRG9vcmJlbGwt/MDMtNzY4eDUxMi5q/cGc" alt="Product 2">
+                <p>Product 2</p>
+                <p>$30.00</p>
+            </div>
+            <div class="product">
+                <img src="https://imgs.search.brave.com/mbSU_dC3cUrvLWNT8qpVNPq_sRr5FTw5pLT_E9TtRTQ/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90aGVn/YWRnZXRmbG93LmNv/bS93cC1jb250ZW50/L3VwbG9hZHMvMjAy/MC8wOC9PcmFsLUIt/aU8tQUktVG9vdGhi/cnVzaC0wMS5qcGc" alt="Product 3">
+                <p>Product 3</p>
+                <p>$40.00</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <h2>Why Shop with Us?</h2>
+        <div class="feature-list">
+            <div class="feature">
+                <img src="https://imgs.search.brave.com/1RizdN3hEkyTIHb5tUKUO6QsG7uHIT7JScWvENMxYh0/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/c2hpcGNhcnRlLmNv/bS93cC1jb250ZW50/L3VwbG9hZHMvMjAy/My8wOC9sd2Nxa3pt/T1E5NFhCWi5qcGVn" alt="Feature 1">
+                <p>Fast Shipping</p>
+            </div>
+            <div class="feature">
+                <img src="https://imgs.search.brave.com/xXtC2dAxW72_1G2Ct2y_iyondQnFhYSpXdYdhl9nZo8/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS12ZWN0b3Iv/YmVzdC1wcmljZS1s/YWJlbC1kZXNpZ25f/MTM5NC0xNi5qcGc_/c2l6ZT02MjYmZXh0/PWpwZw" alt="Feature 2">
+                <p>Best Prices</p>
+            </div>
+            <div class="feature">
+                <img src="https://imgs.search.brave.com/O1nrg94ckV7mfAKK2wdlr7Qxq_2Cqf6VNhsi6Fw5Ygk/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly92ZWN0/b3JpZmllZC5jb20v/aW1hZ2VzL3NlY3Vy/ZS1wYXltZW50LWlj/b24tMzIuanBn" alt="Feature 3">
+                <p>Secure Payment</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Top</button>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+        </ul>
+        <p>&copy; 2024 E-Shop. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

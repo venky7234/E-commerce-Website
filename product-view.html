@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product View</title>
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar */
+        #navbar {
+            background: #333;
+            color: #fff;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        #navbar ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            margin: 0;
+            padding: 0;
+        }
+
+        #navbar li {
+            margin: 0;
+        }
+
+        #navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        #navbar a:hover {
+            background: #555;
+            border-radius: 5px;
+        }
+
+        /* Footer */
+        #footer {
+            background: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Product View Page Styles */
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding-top: 60px; /* Adjust for fixed navbar */
+        }
+
+        #product-images img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        #product-title {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        #product-description, #product-price, #product-ratings, #related-products {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #product-title {
+            font-size: 2em;
+            color: #333;
+        }
+
+        #add-to-cart {
+            background: #333;
+            color: #fff;
+            border: none;
+            padding: 15px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            width: 100%;
+        }
+
+        #add-to-cart:hover {
+            background: #555;
+        }
+
+        #related-products .product {
+            display: inline-block;
+            width: 24%;
+            margin: 1%;
+            background: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        #related-products .product img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        #related-products .product h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        #related-products .product p {
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav id="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="category.html">Category</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="checkout.html">Checkout</a></li>
+            <li><a href="order-confirmation.html">Order Confirmation</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+            <li><a href="search.html">Search</a></li>
+        </ul>
+    </nav>
+
+    <!-- Product View Page Content -->
+    <div class="container">
+        <!-- Product Title -->
+        <h1 id="product-title">Product Title</h1>
+
+        <!-- Product Images -->
+        <div id="product-images">
+            <img src="https://imgs.search.brave.com/z4_NT6BnqnB7tzji3GSx3nJDVALBKdMXIjdLKh_Q31M/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFQQmtBMEcrM0wu/anBn" alt="Product Image 1">
+            <img src="https://imgs.search.brave.com/_u3DdqRZWTBs1TjEtTjhXnKqMVLp6ln-j0INdU-FzFg/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFJbEwzcTd6bkwu/anBn" alt="Product Image 2">
+             <img src="https://imgs.search.brave.com/z4_NT6BnqnB7tzji3GSx3nJDVALBKdMXIjdLKh_Q31M/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFQQmtBMEcrM0wu/anBn" alt="Product Image 3">
+              <img src="https://imgs.search.brave.com/PMVELtmLwmZtBPDh8-pmSbOu_PgndB1o8QUXnRx1lbY/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzEyR05jczJrTkwu/anBn" alt="Product Image 4">
+            <img src="https://imgs.search.brave.com/63o81xi63veL0RJnsF0Ct0s1gAhnCYiMVz4JgQfy1Ss/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/ZGF5Zm94eHJlc291/cmNlcy5jb20vd3At/Y29udGVudC91cGxv/YWRzLzIwMjMvMDcv/VGVjaC1HYWRnZXRz/LTIwMjQucG5n" alt="Product Image 5">
+        </div>
+
+        <!-- Product Description -->
+        <div id="product-description">
+            <h2>Description</h2>
+            <p>Product description goes here. Include details about the product's features, benefits, and specifications.</p>
+        </div>
+
+        <!-- Product Price -->
+        <div id="product-price">
+            <h2>Price</h2>
+            <p>$99.99</p>
+        </div>
+
+        <!-- Product Ratings -->
+        <div id="product-ratings">
+            <h2>Ratings</h2>
+            <p>★★★★☆</p> <!-- Example star rating -->
+        </div>
+
+        <!-- Related Products -->
+        <div id="related-products">
+            <h2>Related Products</h2>
+            <div class="product">
+                <img src="https://imgs.search.brave.com/4ChcR_rCHvU7sK2-bwZzk16kS-fOhrocxU6sS_e7dKU/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/Y25ldC5jb20vYS9p/bWcvcmVzaXplL2Fk/NzM5MjAwMGY4OTdj/Zjg3Y2I0ZGFiODY1/NzMyMzA3ZGUwM2Fl/YjgvaHViLzIwMjQv/MDIvMjYvMTMzMDcy/MjctMzlkOS00ZGQz/LWFiNzItZTlmZWYx/YzEwNDIxL3NhbXN1/bmctZ2FsYXh5LXJp/bmctbXdjLTIwMjQt/MDkuanBnP2F1dG89/d2VicCZ3aWR0aD0x/MjAw" alt="Related Product 1">
+                <h3>Related Product 1</h3>
+                <p>$49.99</p>
+            </div>
+            <div class="product">
+                <img src="https://imgs.search.brave.com/idZSl1JH1-nK7Jm3-wf6en-JMQ3HDqTBwRja_tDUJXQ/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9oaXBz/LmhlYXJzdGFwcHMu/Y29tL2htZy1wcm9k/L2ltYWdlcy9kb3du/bG9hZC0yMDI0LTAx/LTA1dDEwNTQyNS01/MTMtNjU5N2RmZjI0/YWE4Ny5wbmc_Y3Jv/cD0wLjY2OHh3OjEu/MDB4aDswLjE2NXh3/LDAmcmVzaXplPTk4/MDoq" alt="Related Product 2">
+                <h3>Related Product 2</h3>
+                <p>$59.99</p>
+            </div>
+            <div class="product">
+                <img src="https://imgs.search.brave.com/pzs3FImQRs1q1uYTmlq34UVR0shocU0MWvMZkjJF07U/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9naXpt/b2RvLmNvbS9hcHAv/dXBsb2Fkcy8yMDI0/LzA3LzIwMjQwNzIz/XzEyNTgwMTIuanBn" alt="Related Product 3">
+                <h3>Related Product 3</h3>
+                <p>$69.99</p>
+            </div>
+            <div class="product">
+                <img src="https://imgs.search.brave.com/tlU_bWKbnyl2A8PpUOO3CrwL6p80LimIuTWNXCEOu48/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/c2xhc2hnZWFyLmNv/bS9pbWcvZ2FsbGVy/eS90b3AtMTAtdGVj/aC1nYWRnZXRzLXdl/cmUtbG9va2luZy1m/b3J3YXJkLXRvLW1v/c3QtaW4tMjAyNC9p/bnRyby0xNjkzMzIz/OTQxLmpwZw" alt="Related Product 4">
+                <h3>Related Product 4</h3>
+                <p>$79.99</p>
+            </div>
+        </div>
+
+        <!-- Add to Cart -->
+        <button id="add-to-cart">Add to Cart</button>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <p>&copy; 2024 Your E-commerce Website</p>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+        </ul>
+    </footer>
+
+    <script>
+        // JavaScript to handle Add to Cart button click
+        document.getElementById('add-to-cart').addEventListener('click', function() {
+            // Assuming this will add the item to the cart
+            alert('Item added to cart!');
+            // Implement further functionality to handle cart update
+        });
+    </script>
+</body>
+</html>

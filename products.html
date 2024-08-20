@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Page</title>
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar */
+        #navbar {
+            background: #333;
+            color: #fff;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        #navbar ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            margin: 0;
+            padding: 0;
+        }
+
+        #navbar li {
+            margin: 0;
+        }
+
+        #navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        #navbar a:hover {
+            background: #555;
+            border-radius: 5px;
+        }
+
+        /* Footer */
+        #footer {
+            background: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Products List */
+        #products-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px;
+            margin-top: 60px; /* Adjust for fixed navbar */
+        }
+
+        .product-item {
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            width: 30%;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .product-item img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .product-item h2 {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+
+        .product-item p {
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        #category-filter, #price-range-filter {
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+        }
+
+        #category-filter select, #price-range-filter input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #category-filter h2, #price-range-filter h2 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav id="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="category.html">Category</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="checkout.html">Checkout</a></li>
+            <li><a href="order-confirmation.html">Order Confirmation</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+            <li><a href="search.html">Search</a></li>
+        </ul>
+    </nav>
+
+    <!-- Category Filter -->
+    <div id="category-filter">
+        <h2>Filter by Category</h2>
+        <select id="category-select">
+            <option value="all">All Categories</option>
+            <option value="electronics">Electronics</option>
+            <option value="clothing">Clothing</option>
+            <option value="home">Home & Garden</option>
+            <option value="books">Books</option>
+        </select>
+    </div>
+
+    <!-- Price Range Filter -->
+    <div id="price-range-filter">
+        <h2>Filter by Price</h2>
+        <input type="range" id="price-range" min="0" max="500" step="10" value="250">
+        <p>Max Price: $<span id="price-value">250</span></p>
+    </div>
+
+    <!-- Products List -->
+    <div id="products-list">
+        <div class="product-item">
+            <a href="product-view.html">
+                <img src="https://imgs.search.brave.com/z4_NT6BnqnB7tzji3GSx3nJDVALBKdMXIjdLKh_Q31M/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFQQmtBMEcrM0wu/anBn" alt="Product Image 1">
+                <h2>USSB 1</h2>
+                <p>Description for product 1</p>
+                <p>$25.00</p>
+            </a>
+        </div>
+        <div class="product-item">
+            <a href="product-view.html">
+                <img src="https://imgs.search.brave.com/_u3DdqRZWTBs1TjEtTjhXnKqMVLp6ln-j0INdU-FzFg/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFJbEwzcTd6bkwu/anBn" alt="Product Image 2">
+                <h2>Bluetooth 2</h2>
+                <p>Description for product 2</p>
+                <p>$50.00</p>
+            </a>
+        </div>
+        <div class="product-item">
+            <a href="product-view.html">
+                <img src="https://imgs.search.brave.com/z4_NT6BnqnB7tzji3GSx3nJDVALBKdMXIjdLKh_Q31M/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFQQmtBMEcrM0wu/anBn" alt="Product Image 3">
+                <h2>Sleep Brand 3</h2>
+                <p>Description for product 3</p>
+                <p>$75.00</p>
+            </a>
+        </div>
+        <div class="product-item">
+            <a href="product-view.html">
+                <img src="https://imgs.search.brave.com/PMVELtmLwmZtBPDh8-pmSbOu_PgndB1o8QUXnRx1lbY/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzEyR05jczJrTkwu/anBn" alt="Product Image 4">
+                <h2>GPS Tracker 4</h2>
+                <p>Description for product 4</p>
+                <p>$100.00</p>
+            </a>
+        </div>
+        <div class="product-item">
+            <a href="product-view.html">
+                <img src="https://imgs.search.brave.com/63o81xi63veL0RJnsF0Ct0s1gAhnCYiMVz4JgQfy1Ss/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/ZGF5Zm94eHJlc291/cmNlcy5jb20vd3At/Y29udGVudC91cGxv/YWRzLzIwMjMvMDcv/VGVjaC1HYWRnZXRz/LTIwMjQucG5n" alt="Product Image 5">
+                <h2>Product 5</h2>
+                <p>Description for product 5</p>
+                <p>$150.00</p>
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <p>&copy; 2024 Your E-commerce Website</p>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+        </ul>
+    </footer>
+
+    <script>
+        // JavaScript for Price Range Filter
+        const priceRangeInput = document.getElementById('price-range');
+        const priceValue = document.getElementById('price-value');
+
+        priceRangeInput.addEventListener('input', function() {
+            priceValue.textContent = priceRangeInput.value;
+            // Implement further functionality to filter products based on the s

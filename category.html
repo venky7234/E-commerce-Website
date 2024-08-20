@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category Page</title>
+    <link rel="stylesheet" href="styles.css">
+	 <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background: #333;
+            color: #fff;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            margin: 0;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        nav a:hover {
+            background: #555;
+            border-radius: 5px;
+        }
+
+        /* Main Content */
+        .container {
+            padding: 80px 20px 20px; /* Adjusted for fixed navbar */
+        }
+
+        #category-title {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        #category-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .category-item {
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            text-align: center;
+            width: calc(50% - 40px); /* Adjusted for spacing */
+        }
+
+        .category-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        #category-images {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        #category-images img {
+            max-width: 45%; /* Adjusted for spacing */
+            height: auto;
+            border-radius: 5px;
+        }
+
+        #category-description {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+
+        footer ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+
+        footer li {
+            margin: 0 10px;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Scroll to Top Button */
+        #scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none;
+        }
+
+        #scroll-to-top:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav id="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="category.html">Category</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="checkout.html">Checkout</a></li>
+            <li><a href="order-confirmation.html">Order Confirmation</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+            <li><a href="search.html">Search</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Category Title -->
+        <h1 id="category-title">Vicky's -Store</h1>
+
+        <!-- Category List -->
+        <div id="category-list">
+            <div class="category-item">
+                <img src="https://imgs.search.brave.com/uv0KC6wL_VYxQ7uLc0t-KeqGpB5U0vt-PKqcuKcJChY/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9rYW1l/cnBvd2VyLmNvbS93/cC1jb250ZW50L3Vw/bG9hZHMvMjAyMi8w/NS8yMC1CZXN0LVRl/Y2gtRm9yLUNvbGxl/Z2UtU3R1ZGVudHMt/MjAyMi1UZWNoLUdh/ZGdldHMtRm9yLUNv/bGxlZ2UtU3R1ZGVu/dHMtb25saW5lLmpw/Zw" alt="Category 1">
+                <h2>AI gadgets</h2>
+                <p>All AI Techonology gadgets are avalible here.</p>
+            </div>
+            <div class="category-item">
+                <img src="https://imgs.search.brave.com/sNBRfDhFuaBtDks98fUCx6qnfs64VVfNsDLHzLrtYBU/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/bXltYWdpY2Z1bmRh/cy5jb20vd3AtY29u/dGVudC91cGxvYWRz/LzIwMTQvMDQvQ29v/bC1UZWNoLUdhZGdl/dHMtRm9yLVN0dWRl/bnRzLmpwZw" alt="Category 2">
+                <h2>Smart gadgets</h2>
+                <p>Student required gadgets are avalible here.</p>
+            </div>
+            <!-- Add more categories as needed -->
+        </div>
+
+        <!-- Category Images -->
+        <div id="category-images">
+            <img src="https://imgs.search.brave.com/bW7N85XR-WgAAcq56iQrA1PBEd625dcp9rgt9C1DvFU/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/bW9zLmNtcy5mdXR1/cmVjZG4ubmV0L0RY/eHQ4blRpRUQ4c01E/VXBvbTJ3Z0EtMzIw/LTgwLmpwZw" alt="Category Image 1">
+            <img src="https://imgs.search.brave.com/Yq8_h3zN_R3VRKNQ_o3gickgH2cJZQ8qeOOn5hdWj5A/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9hbGxz/dHVkeWd1aWRlLmNv/bS93cC1jb250ZW50/L3VwbG9hZHMvMjAy/MS8wOC9zbWFydC13/YXRjaC5qcGc" alt="Category Image 2">
+            <!-- Add more category images as needed -->
+        </div>
+
+        <!-- Category Short Description -->
+        <div id="category-description">
+            <p>This is a brief description of the category. It provides some context and details about what users can find in this category.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <p>&copy; 2024 Your E-commerce Website</p>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+        </ul>
+    </footer>
+
+    <button id="scroll-to-top">Top</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
